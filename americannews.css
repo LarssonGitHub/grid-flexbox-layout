@@ -1,0 +1,110 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: #fff;
+     margin: 0;
+ }
+
+ /*FLEXBOX CONTAINER För headern*/
+
+ .header_container {
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: #b22234;
+     padding: 1rem 2rem;
+ }
+
+ /*Header_item child to .header_container*/
+
+ .header_item {
+     flex: 1;
+     text-align: center;
+ }
+
+ #main_nav li {
+     display: inline-block;
+     padding: 5px 10px;
+     margin: 10px 5px;
+     border: 5px #fff solid;
+     background-color: #fff;
+     color: black;
+     width: 100px;
+ }
+
+ /*EVERYTHING WITHIN MAIN*/
+
+ .grid-container {
+     /*Used to staple section and aside*/
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(1, 1fr);
+     /*Do not use % Martin!! use grid-template-columns: repeat(4, 25%);*/
+     grid-gap: 30px;
+     margin: 3rem 8rem;
+ }
+
+ .grid-section {
+     /* Used to staple articles (child to grid-container)*/
+     display: grid;
+     grid-template-rows: repeat(5, 1fr);
+     grid-gap: 30px;
+     grid-column: 1 / span 3;
+ }
+
+ .grid-aside {
+     /* Used to staple aside (child to grid.container)*/
+     grid-column: 4 / 5;
+     text-align: center;
+     background-color: #b22234;
+
+ }
+
+ .style_news-article {
+     /*Used to staple everything inside the articles,
+     (child to .grid-section*/
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     padding: 3%;
+     background-color: #3C3B6E;
+ }
+
+
+ /*FOR FOOTER!*/
+ .footer_container {
+     display: flex;
+     flex: 1;
+     background-color: #b22234;
+     padding: 1rem 2rem;
+ }
+
+ /*Children to .footer_container*/
+ .footer_item {
+     border: 5px solid #fff;
+     padding: 30px;
+     background-color: #3C3B6E;
+     flex-grow: 1;
+     margin: 10px 10px;
+ }
+
+ .style_news-article>h2,
+ h4,
+ p {
+     margin: 1rem 3rem;
+ }
+
+ .style_news-article>img {
+     margin: 1rem 3rem;
+     border: 10px solid rgb(255, 255, 255);
+     width: 70%;
+ }
+
+ .styling_lists {
+     padding: 0;
+     margin: 0;
+ }
